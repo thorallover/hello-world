@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
-from os import environ as env
+import sys
 from sys import argv
 
 import bottle
-from bottle import default_app, request, route, response, get
+from bottle import *
 
 @route('/')
 def hello():
