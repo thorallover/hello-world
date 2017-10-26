@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
-from sys import argv
-
 import bottle
+import sys
 from bottle import *
+from sys import *
 
 @route('/')
 def hello():
