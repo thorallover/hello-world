@@ -1,11 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
-from bottle import route, run
+from os import environ as env
+from sys import argv
+
+import bottle
+from bottle import default_app, request, route, response, get
 
 @route('/')
 def hello():
   return '<h1>Hello World!</h1>'
   
-if os.environ.get('APP_LOCATION') == 'heroku':
-    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-else:
-    run(host='localhost', port=8080, debug=True)
+run(host='0.0.0.0', port=argv[1])
