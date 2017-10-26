@@ -4,10 +4,9 @@
 import bottle
 import sys
 import json
-import urllib
+import urllib.request
 from bottle import *
 from sys import *
-from urllib import *
 
 with urllib.request.urlopen("http://apis.is/concerts") as url:
     data = json.loads(url.read().decode())
