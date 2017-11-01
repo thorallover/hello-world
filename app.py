@@ -11,7 +11,7 @@ with urllib.request.urlopen("http://apis.is/concerts") as url:
     data = json.loads(url.read().decode())
 
 		
-@route('/')
+@route('/ind')
 def index():
      return template('index', data=data)
   
